@@ -33,5 +33,8 @@ jobs:
 
       - id: jupyter 
         name: Jupyter Notebook Execution
+        env: 
+          CLICKHOUSE_UNAME: ${{secrets.CLICKHOUSE_UNAME}}
+          CLICKHOUSE_PW: ${{secrets.CLICKHOUSE_PW}}        
         run: jupyter execute download.ipynb
         shell: bash 
